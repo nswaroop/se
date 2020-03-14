@@ -26,7 +26,7 @@ testing_testing:
 
   artifacts:
     paths:
-      - ./
+      - codepipeline-us-east-2-540336744369
       
 
   
