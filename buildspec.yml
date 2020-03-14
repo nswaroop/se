@@ -39,6 +39,6 @@ deploy_production:
         - echo "Deployed"
     environment:
         name: production
-        url: <https://gitlab.com>
+        url: https://seproject1.s3.us-east-2.amazonaws.com/se.zip
     only:
         - master
