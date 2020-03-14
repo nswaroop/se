@@ -1,4 +1,5 @@
 image: node:latest
+version: 0.2
 
 stages:
   - build
