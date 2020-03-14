@@ -1,0 +1,43 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+      
+testing_testing:
+  stage: test
+  script: 
+    - echo "Testing the code"
+    - npm test
+
+  artifacts:
+    paths:
+      - ./
+      
+
+  
+deploy_production:
+    stage: deploy
+    
+    script:
+        - echo "Deploying to server"
+        - npm build
+        - echo "Deployed"
+    environment:
+        name: production
+        url: <https://gitlab.com>
+    only:
+        - master
